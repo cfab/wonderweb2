@@ -4,7 +4,7 @@
        url('../fonts/esface-book-trial-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
+  font-display: swap;
 }
 @tailwind base;
 @tailwind components;
@@ -25,11 +25,11 @@ body {
 }
 
 h1 {
-  @apply text-6xl font-normal leading-none font-es text-uidark;
+  @apply text-5xl font-normal leading-snug font-es text-uidark;
 }
 
 .intro {
-  @apply text-6xl font-normal leading-none text-white font-es;
+  @apply text-5xl font-normal leading-snug text-white font-es;
 }
 
 a {
