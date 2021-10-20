@@ -8,8 +8,14 @@ module.exports = {
   },
   theme: {
     extend: {
+      fontFamily: {
+        es :'es_face_book_trialregular',
+      },
       colors: {
-        change: 'red',
+        primary: '#556271',
+        secondary:'#FF6A67',
+        uidark: '#7B8898',
+        ui: '#d3dbe4',
       },
     },
   },

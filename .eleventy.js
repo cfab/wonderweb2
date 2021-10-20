@@ -1,8 +1,15 @@
 const htmlmin = require('html-minifier')
 const now = String(Date.now())
 const { DateTime } = require("luxon");
+// pour le debug cf: https://github.com/11ty/eleventy/issues/1526#issuecomment-731855231
+const inspect = require("util").inspect;
+
 
 module.exports = function (eleventyConfig) {
+  // debug
+  eleventyConfig.addFilter("debug", (content) => `${inspect(content)}`);
+
+  eleventyConfig.addPassthroughCopy("fonts");
 
   // navigation plugin
   const pluginNavigation = require("@11ty/eleventy-navigation");

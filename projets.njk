@@ -1,0 +1,17 @@
+---
+layout: default
+title: Liste des projets
+eleventyNavigation:
+  key: Projets
+---
+
+<ol class="w-3/4 ml-auto liste">
+{% for post in collections.post %}
+    <li class="my-16 text-base ">
+      <a href="{{ post.url }}" class="font-sans font-bold uppercase text-secondary">{{ post.data.title }}</a>
+      <div class="my-4 font-es">
+      {{ post.data.description }}
+      </div>
+    </li>
+{% endfor %}
+</ol>

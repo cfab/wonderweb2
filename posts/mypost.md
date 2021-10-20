@@ -1,8 +1,8 @@
 ---
-title: Projet 222
+title: Projet Juin 2018
 layout: post
-description: This is a post on My Blog about agile frameworks.
-date: 2018-05-01
+description: La description du premier projet
+date: 2018-06-01
 tags: post
 ---
 Mon premier projet

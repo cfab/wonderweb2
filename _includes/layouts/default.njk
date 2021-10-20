@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>
-      {% block title %}Does it work?{% endblock %}
-    </title>
-    <meta charset="UTF-8"/>
-    {% if description %}
-      <meta name="description" content="{{description}}"/>
-    {% endif %}
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"/>
-    <link rel="stylesheet" href="/style.css?v={% version %}"/>
-    {% block head %}{% endblock %}
-    <script defer src="/js/alpine.js?v={% version %}"></script>
-  </head>
-  <body>
 
-    <header>
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
+<head>
+  <title>
+  </title>
+  <meta charset="UTF-8" />
+  {% if description %}
+  <meta name="description" content="{{description}}" />
+  {% endif %}
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+  <link rel="stylesheet" href="/style.css?v={% version %}" />
+  {% block head %}{% endblock %}
+  <script defer src="/js/alpine.js?v={% version %}"></script>
+</head>
 
-      {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-
-<ul class="nav">
-
-      {%- for entry in collections.all | eleventyNavigation %}
-        <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}"><a href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-      {%- endfor %}
+<body>
+  <header class="container flex flex-wrap justify-between mx-auto mt-24 font-bold tracking-wider uppercase">
+    <div class="w-1/4"><a href="{{ '/' | url }}" class="text-white">Wonderweb</a></div>
+    <div class="w-1/4">
+      <ul class="nav">
+        {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+        {%- for entry in collections.all | eleventyNavigation %}
+        <li class="nav-item"><a
+            href="{{ entry.url | url }}" class="{% if entry.url == page.url %} text-white{% endif %}">{{ entry.title }}</a></li>
+        {%- endfor %}
       </ul>
-    </header>
-
-
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
-
-
+    </div>
+    <div class="w-1/2">~</div>
+ </div>
+  </header>
+  <main class="container mx-auto">
+    <div class="my-16">
+      <h1>{{ title | safe }}</h1>
+      <div class="intro">
       {{ content | safe }}
-    </main>
-
-
+      </div>
+    </div>
+  </main>
     <!-- Current page: {{ page.url | url }} -->
-  </body>
+
+    {# <pre>{{ page | debug }}</pre> #}
+</body>
+
 </html>

@@ -1,9 +1,57 @@
+@font-face {
+  font-family: 'es_face_book_trialregular';
+  src: url('../fonts/esface-book-trial-webfont.woff2') format('woff2'),
+       url('../fonts/esface-book-trial-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
-  .change {
-    color: red;
+  .text-fluid {
+    font-size: 1vw;
   }
+}
+
+::selection {
+  @apply text-white bg-secondary;
+}
+
+body {
+  @apply font-sans text-base text-white bg-primary ;
+}
+
+h1 {
+  @apply text-6xl font-normal leading-none font-es text-uidark;
+}
+
+.intro {
+  @apply text-6xl font-normal leading-none text-white font-es;
+}
+
+a {
+  @apply text-ui;
+}
+
+.liste {
+  counter-reset: li;
+}
+
+.liste li::before {
+  @apply flex items-center justify-center font-sans border border-2 border-solid rounded-full text-secondary border-secondary;
+
+  counter-increment: li;
+  content: counter(li);
+  position: absolute;
+
+  margin-top: -0.5625em;
+  margin-left: -5em;
+  font-size: 14px;
+  font-size: 0.875em;
+  font-weight: 700;
+  width: 2.5em;
+  height: 2.5em;
 }
