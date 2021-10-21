@@ -36,22 +36,7 @@ a {
   @apply text-ui;
 }
 
-.liste {
-  counter-reset: li;
-}
 
-.liste li::before {
-  @apply flex items-center justify-center font-sans border border-2 border-solid rounded-full text-secondary border-secondary;
-
-  counter-increment: li;
-  content: counter(li);
-  position: absolute;
-
-  margin-top: -0.5625em;
-  margin-left: -5em;
-  font-size: 14px;
-  font-size: 0.875em;
-  font-weight: 700;
-  width: 2.5em;
-  height: 2.5em;
+.code {
+  @apply flex items-center justify-center font-sans text-sm uppercase text-secondary border-secondary;
 }
