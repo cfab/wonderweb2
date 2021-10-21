@@ -13,9 +13,39 @@
 </head>
 
 <body>
+  <!-- parallax -->
+  <div class="body-parallax">
+    <div class="container parallax">
+      <div class="parallax-group parallax-group--far-left">
+        <div class="parallax-item parallax-item--o parallax-item--left"></div>
+        <div class="parallax-item parallax-item--x parallax-item--left"></div>
+        <div class="parallax-item parallax-item--o parallax-item--left"></div>
+        <div class="parallax-item parallax-item--x"></div>
+        <div class="parallax-item parallax-item--x"></div>
+        <div class="parallax-item parallax-item--x"></div>
+      </div>
+      <div class="parallax-group parallax-group--mid-left">
+        <div class="parallax-item parallax-item--x"></div>
+        <div class="parallax-item parallax-item--o"></div>
+        <div class="parallax-item parallax-item--x"></div>
+      </div>
+      <div class="parallax-group parallax-group--mid-right">
+        <div class="parallax-item parallax-item--o"></div>
+        <div class="parallax-item parallax-item--o"></div>
+        <div class="parallax-item parallax-item--o"></div>
+      </div>
+      <div class="parallax-group parallax-group--far-right">
+        <div class="parallax-item parallax-item--x"></div>
+        <div class="parallax-item parallax-item--x"></div>
+        <div class="parallax-item parallax-item--x"></div>
+      </div>
+    </div>
+  </div>
+  <!-- end parallax -->
+
   <header class="container flex flex-wrap justify-between mx-auto mt-24 font-bold tracking-wider uppercase">
-    <div class="w-1/4"><a href="{{ '/' | url }}" class="text-white">Wonderweb</a></div>
-    <div class="w-1/4">
+    <div class="w-1/4 px-4"><a href="{{ '/' | url }}" class="text-white">Wonderweb</a></div>
+    <div class="w-1/4 px-4">
       <ul class="nav">
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
         {%- for entry in collections.all | eleventyNavigation %}
@@ -24,19 +54,20 @@
         {%- endfor %}
       </ul>
     </div>
-    <div class="w-1/2">
+    <div class="w-1/2 px-4">
       <div id="wcb" class="carbonbadge wcb-d"></div>
       <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
     </div>
     </div>
   </header>
   <main class="container mx-auto">
-    <div class="my-16">
+    <div class="px-4 mt-16">
       <h1>{{ title | safe }}</h1>
-      <div class="intro">
-        {{ content | safe }}
-      </div>
     </div>
+
+
+     {{ content | safe }}
+
   </main>
   <!-- Current page: {{ page.url | url }} -->
   {# <pre>{{ page | debug }}</pre> #}

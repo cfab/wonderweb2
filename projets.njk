@@ -1,16 +1,20 @@
 ---
 layout: default
-title: Réalisations
+title: Dernières mise en ligne
 eleventyNavigation:
   key: Réalisations
 ---
+
+<div class="chapeau">
 Alors ici on est plutôt sur du site internet <em>local</em> et de <em>qualité</em>, fait avec passion en suivant l'évolution des technologies.
-<ol class="w-3/4 ml-auto liste">
+</div>
+{% block contenu %}
+<ol class="flex flex-col items-end ">
 {% for post in collections.post %}
-    <li class="flex flex-wrap my-16 -mx-8 text-base">
-      <div class="w-1/6 px-8 "> <span class="code">{{ post.data.date | readableDate }}</span></div>
+    <li class="flex flex-wrap w-3/4 my-16 text-base">
+      <div class="w-1/6 "> <span class="code">{{ post.data.date | readableDate }}</span></div>
       <div class="flex-1 px-8">
-       <a href="{{ post.url }}" class="font-sans font-bold uppercase text-secondary">{{ post.data.title }}</a>
+       <a href="{{ post.data.url }}" target="_blank"  class="font-sans font-bold uppercase text-secondary">{{ post.data.title }}</a>
       <div class="my-4 font-es">
       {{ post.data.description }}
       </div>
@@ -19,3 +23,4 @@ Alors ici on est plutôt sur du site internet <em>local</em> et de <em>qualité<
     </li>
 {% endfor %}
 </ol>
+{% endblock %}

@@ -1,11 +1,12 @@
 @font-face {
   font-family: 'es_face_book_trialregular';
   src: url('../fonts/esface-book-trial-webfont.woff2') format('woff2'),
-       url('../fonts/esface-book-trial-webfont.woff') format('woff');
+    url('../fonts/esface-book-trial-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -21,22 +22,70 @@
 }
 
 body {
-  @apply font-sans text-base text-white bg-primary ;
+  @apply font-sans text-base text-white bg-primary;
 }
 
 h1 {
   @apply text-5xl font-normal leading-snug font-es text-uidark;
 }
 
-.intro {
-  @apply text-5xl font-normal leading-snug text-white font-es;
+.chapeau {
+  @apply px-4 text-5xl font-normal leading-snug text-white font-es;
 }
 
 a {
   @apply text-ui;
 }
 
-
 .code {
-  @apply flex items-center justify-center font-sans text-sm uppercase text-secondary border-secondary;
+  @apply flex items-center justify-start px-4 font-sans text-sm uppercase text-secondary border-secondary;
+}
+
+
+a[target="_blank"]:after {
+  @apply text-secondary;
+  content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==');
+  margin: 0 3px 0 5px
+}
+
+.body-parallax {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+.parallax {
+  position: relative;
+  display: flex;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  z-index: 0;
+
+}
+
+.parallax-group {
+  position: relative;
+  display: block;
+  height: 100vh;
+  width: 33.33333%;
+  border-right: 1px solid #687789;
+
+  @apply md:w-1/3 lg:w-1/4;
+
+}
+
+.parallax-group:nth-child(1) {
+  border-left: 1px solid #687789;
+  animation: expand 200ms normal ease-out;
+}
+.parallax-group:nth-child(2) {
+  animation: expand 400ms normal ease-out;
 }
