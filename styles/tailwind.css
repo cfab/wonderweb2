@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'es_face_book_trial';
   src: url('../fonts/esface-book-trial-webfont.woff2') format('woff2'),
     url('../fonts/esface-book-trial-webfont.woff') format('woff');
@@ -14,7 +14,7 @@
   font-weight: bold;
   font-style: normal;
   font-display: swap;
-}
+} */
 
 @tailwind base;
 @tailwind components;
@@ -35,11 +35,20 @@ body {
 }
 
 h1 {
-  @apply text-2xl font-bold leading-snug md:text-4xl font-es text-ui;
+  @apply font-serif text-2xl font-bold leading-snug md:text-4xl text-ui;
+  animation: 500ms ease-out fadeInUpSD;
+
 }
 
 .chapeau {
-  @apply w-full px-4 text-2xl font-bold leading-snug text-white md:text-4xl font-es md:w-3/4;
+  @apply w-full px-4 font-serif text-2xl font-bold leading-snug text-white md:text-4xl md:w-3/4;
+
+  animation: 500ms ease-out 100ms fadeInUpSD;
+}
+
+.content {
+
+  animation: 500ms ease-out 200ms fadeInUpSD;
 }
 
 a {
@@ -48,6 +57,19 @@ a {
 
 .date {
   @apply text-sm font-bold uppercase text-secondary;
+}
+
+.page-content h3 {
+    @apply pt-4 font-sans font-bold tracking-wider uppercase text-secondary;
+}
+.page-content p {
+  @apply my-4 font-serif text-lg;
+}
+.page-content a {
+  @apply text-white border-b border-solid;
+}
+.page-content a:hover {
+  @apply text-secondary border-secondary;
 }
 
 
@@ -202,4 +224,74 @@ a[target="_blank"]:after {
 }
 .parallax-group--far-right .parallax-item:nth-child(3) {
   display: none;
+}
+
+
+
+
+
+@-webkit-keyframes fadeInUpSD {
+  0% {
+
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUpSD {
+  0% {
+
+    -webkit-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUpSD {
+  -webkit-animation-name: fadeInUpSD;
+  animation-name: fadeInUpSD;
+}
+
+
+
+@-webkit-keyframes fadeOutUpSD {
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes fadeOutUpSD {
+  0% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+
+.fadeOutUpSD {
+  -webkit-animation-name: fadeOutUpSD;
+  animation-name: fadeOutUpSD;
 }

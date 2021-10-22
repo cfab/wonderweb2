@@ -8,9 +8,9 @@ module.exports = {
   },
   theme: {
     extend: {
-      fontFamily: {
-        es :'es_face_book_trial',
-      },
+      // fontFamily: {
+      //   es :'Times New Roman',
+      // },
       colors: {
         primary: '#953b3a',
         secondary:'#FF6A67',
