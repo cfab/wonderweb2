@@ -17,10 +17,10 @@ Alors ici on est plutôt sur du site internet <em>local</em> et de <em>qualité<
             <span class="date">{{ post.data.date | htmlDateString }}</span>
       </div>
       <div class="flex-1 px-4">
-       <a href="{{ post.data.url }}" target="_blank" rel="noopener" class="font-sans font-bold tracking-wider uppercase border-b-2 border-solid text-secondary border-secondary">{{ post.data.title }}</a>
-      <div class="my-4 text-lg font-serif">
-      {{ post.data.description }}
-      </div>
+       <img src="{{ post.data.url }}/favicon.ico" class="inline w-6 h-6 mr-2 bg-uidark" /> <a href="{{ post.data.url }}" target="_blank" rel="noopener" class="font-sans font-bold tracking-wider uppercase border-b-2 border-solid text-secondary border-secondary">{{ post.data.title }}</a>
+        <div class="my-4 font-serif text-lg">
+        {{ post.data.description }}
+        </div>
       </div>
 
     </li>
