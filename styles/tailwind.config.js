@@ -14,8 +14,8 @@ module.exports = {
       colors: {
         primary: '#953b3a',
         secondary:'#FF6A67',
-        uidark: '#e35653',
-        ui: '#af4e4d',
+        uidark: '#493866',
+        ui: '#664f8d',
       },
     },
   },

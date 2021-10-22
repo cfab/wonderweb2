@@ -31,7 +31,7 @@
 }
 
 body {
-  @apply font-sans text-base text-white bg-primary;
+  @apply font-sans text-base text-white bg-uidark;
 }
 
 h1 {

@@ -10,9 +10,9 @@ eleventyNavigation:
 Alors ici on est plutôt sur du site internet <em>local</em> et de <em>qualité</em>, fait avec passion en suivant l'évolution des technologies.
 </div>
 {% block contenu %}
-<ol class="flex flex-col items-end ">
-{% for post in collections.projets %}
-    <li class="flex flex-wrap w-full my-8 text-base md:my-16 md:w-3/4">
+<ol class="flex flex-col items-end mt-16">
+{% for post in collections.projets | reverse %}
+    <li class="flex flex-wrap w-full text-base md:my-8 md:w-3/4">
       <div class="md:absolute md:-ml-24">
             <span class="date">{{ post.data.date | htmlDateString }}</span>
       </div>
