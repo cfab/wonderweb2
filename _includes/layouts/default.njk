@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
   <link rel="stylesheet" href="/style.css?v={% version %}" />
   {% block head %}{% endblock %}
-  <script defer src="/js/alpine.js?v={% version %}"></script>
+
 </head>
 
 <body>
@@ -17,15 +17,15 @@
   <div class="body-parallax">
     <div class="container parallax">
       <div class="parallax-group parallax-group--far-left">
-        <div class="parallax-item parallax-item--o parallax-item--left"></div>
+        <div class="parallax-item parallax-item--o parallax-item--left" data-rellax-speed="4"></div>
         <div class="parallax-item parallax-item--x parallax-item--left"></div>
         <div class="parallax-item parallax-item--o parallax-item--left"></div>
-        <div class="parallax-item parallax-item--x"></div>
+        <div class="parallax-item parallax-item--x" data-rellax-speed="3"></div>
         <div class="parallax-item parallax-item--x"></div>
         <div class="parallax-item parallax-item--x"></div>
       </div>
       <div class="parallax-group parallax-group--mid-left">
-        <div class="parallax-item parallax-item--x"></div>
+        <div class="parallax-item parallax-item--x" data-rellax-speed="1"></div>
         <div class="parallax-item parallax-item--o"></div>
         <div class="parallax-item parallax-item--x"></div>
       </div>
@@ -35,7 +35,7 @@
         <div class="parallax-item parallax-item--o"></div>
       </div>
       <div class="parallax-group parallax-group--far-right">
-        <div class="parallax-item parallax-item--x"></div>
+        <div class="parallax-item parallax-item--x" data-rellax-speed="5"></div>
         <div class="parallax-item parallax-item--x"></div>
         <div class="parallax-item parallax-item--x"></div>
       </div>
@@ -71,6 +71,18 @@
   </main>
   <!-- Current page: {{ page.url | url }} -->
   {# <pre>{{ page | debug }}</pre> #}
+  <script src="/js/rellax.js?v={% version %}"></script>
+  <script>
+  // Accepts any class name
+  var rellax = new Rellax('.parallax-item', {
+    speed: 2,
+    center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+  });
+  </script>
 </body>
 
 </html>

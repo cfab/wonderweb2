@@ -2,6 +2,7 @@
   "name": "wonderweb",
   "version": "1.0.0",
   "description": "",
+  "licence":"",
   "keywords": [],
   "author": "",
   "scripts": {
@@ -13,5 +14,9 @@
     "@11ty/eleventy-navigation": "^0.3.2",
     "alpinejs": "^3.3.3",
     "html-minifier": "^4.0.0"
+  },
+  "dependencies": {
+    "locomotive-scroll": "^4.1.3",
+    "rellax": "^1.12.1"
   }
 }

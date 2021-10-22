@@ -23,6 +23,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     './node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
   })
+  // rellax scroll js
+  eleventyConfig.addPassthroughCopy({
+    './node_modules/rellax/rellax.min.js': './js/rellax.js',
+  })
 
   // files version.. useful ?
   eleventyConfig.addShortcode('version', function () {
