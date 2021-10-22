@@ -1,8 +1,17 @@
 @font-face {
-  font-family: 'es_face_book_trialregular';
+  font-family: 'es_face_book_trial';
   src: url('../fonts/esface-book-trial-webfont.woff2') format('woff2'),
     url('../fonts/esface-book-trial-webfont.woff') format('woff');
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'es_face_book_trial';
+  src: url('../fonts/esface-semibold-trial-webfont.woff2') format('woff2'),
+    url('../fonts/esface-semibold-trial-webfont.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
@@ -26,11 +35,11 @@ body {
 }
 
 h1 {
-  @apply text-5xl font-normal leading-snug font-es text-uidark;
+  @apply text-2xl font-bold leading-snug md:text-4xl font-es text-uidark;
 }
 
 .chapeau {
-  @apply px-4 text-5xl font-normal leading-snug text-white font-es;
+  @apply w-full px-4 text-2xl font-bold leading-snug text-white md:text-4xl font-es md:w-3/4;
 }
 
 a {

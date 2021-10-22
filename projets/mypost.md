@@ -4,6 +4,6 @@ layout: post
 description: La description du premier projet
 date: 2018-06-01
 url: https://wonderweb.ch
-tags: post
+tags: projets
 ---
 Mon premier projet

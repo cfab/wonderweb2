@@ -1,10 +1,23 @@
 ---
 layout: default
 title: Accueil
-
+icon: ✨
 ---
-# Création, design et imagination, votre site web sur mesure avec Wonderweb
-
-# Flexibilité
-
-Notre petite structure, très flexible, nous permet d’avoir une relation privilégiée avec nos clients. Avec plus de 10 ans d’expérience, nous nous sommes également entourés de partenaires très compétents.
+<div class="chapeau">
+    Création, design et imagination, votre site web sur mesure avec Wonderweb
+</div>
+<div class="flex flex-col items-end ">
+    {% for post in collections.services %}
+    <div class="flex flex-wrap w-full my-8 text-base md:my-16 md:w-3/4">
+        <div class="w-1/6 "> <span class="text-6xl ">{{ post.data.icon }}</span></div>
+        <div class="flex-1 px-8">
+            <span class="font-sans font-bold tracking-wider uppercase text-secondary ">
+                {{ post.data.title }}
+            </span>
+            <div class="my-4 text-lg font-es">
+                {{ post.data.description }}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

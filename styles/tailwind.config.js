@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        es :'es_face_book_trialregular',
+        es :'es_face_book_trial',
       },
       colors: {
         primary: '#556271',

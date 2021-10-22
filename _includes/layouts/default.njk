@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title> {{ title or metadata.title }} - {{metadata.title}}</title>
+  <title>{{ icon }} {{ title or metadata.title }} - {{metadata.title}}</title>
   <meta charset="UTF-8" />
   <meta name="description" content="{{ description or metadata.description }}">
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -43,7 +43,7 @@
   </div>
   <!-- end parallax -->
 
-  <header class="container relative z-10 flex flex-wrap justify-between mx-auto mt-24 font-bold tracking-wider uppercase">
+  <header class="container relative z-10 flex flex-wrap justify-between mx-auto mt-16 font-bold tracking-wider uppercase">
     <div class="w-1/4 px-4"><a href="{{ '/' | url }}" class="text-white">Wonderweb</a></div>
     <div class="w-1/4 px-4">
       <ul class="nav">
@@ -61,8 +61,8 @@
     </div>
   </header>
   <main class="container relative z-10 mx-auto">
-    <div class="px-4 mt-16">
-      <h1>{{ title | safe }}</h1>
+    <div class="w-full px-4 mt-8 md:mt-24 md:w-3/4">
+      <h1><span class="hidden">{{ title | safe }}</span></h1>
     </div>
 
 
