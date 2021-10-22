@@ -13,8 +13,10 @@ Alors ici on est plutôt sur du site internet <em>local</em> et de <em>qualité<
 <ol class="flex flex-col items-end ">
 {% for post in collections.projets %}
     <li class="flex flex-wrap w-full my-8 text-base md:my-16 md:w-3/4">
-      <div class="w-1/6 "> <span class="code">{{ post.data.date | readableDate }}</span></div>
-      <div class="flex-1 px-8">
+      <div class="md:absolute md:-ml-24">
+            <span class="date">{{ post.data.date | htmlDateString }}</span>
+      </div>
+      <div class="flex-1 px-4">
        <a href="{{ post.data.url }}" target="_blank"  class="font-sans font-bold tracking-wider uppercase border-b-2 border-solid text-secondary border-secondary">{{ post.data.title }}</a>
       <div class="my-4 text-lg font-es">
       {{ post.data.description }}

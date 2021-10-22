@@ -53,7 +53,7 @@ module.exports = function (eleventyConfig) {
 
   // filtres pour single post
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('dd.LL.yyyy');
   });
   eleventyConfig.addFilter("readableDate", dateObj => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('dd LLL yyyy', { locale: "fr" });

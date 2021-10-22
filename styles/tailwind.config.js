@@ -12,13 +12,16 @@ module.exports = {
         es :'es_face_book_trial',
       },
       colors: {
-        primary: '#556271',
+        primary: '#953b3a',
         secondary:'#FF6A67',
-        uidark: '#7B8898',
-        ui: '#d3dbe4',
+        uidark: '#e35653',
+        ui: '#af4e4d',
       },
     },
   },
   variants: {},
   plugins: [],
 }
+
+//e35653
+//#953b3a
