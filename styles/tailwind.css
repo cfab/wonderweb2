@@ -47,12 +47,22 @@ h1 {
 }
 
 .content {
-
   animation: 500ms ease-out 200ms fadeInUpSD;
+}
+
+footer {
+  animation: 500ms ease-out 300ms fadeInUpSD;
 }
 
 a {
   @apply relative text-secondary;
+}
+/* Navigation links */
+.nav a {
+  @apply transition;
+}
+.nav a.item-active {
+  @apply text-white;
 }
 
 .date {
@@ -81,6 +91,7 @@ a[target="_blank"]:after {
   top: -0.2em;
   right: -1.5em;
 }
+
 
 .body-parallax {
   position: fixed;
