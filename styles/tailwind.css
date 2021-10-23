@@ -205,11 +205,11 @@ a[target="_blank"]:after {
 
 .parallax-group--mid-right .parallax-item:nth-child(1) {
   display: none;
-  top: 20em;
+  top: 38em;
 }
 .parallax-group--mid-right .parallax-item:nth-child(2) {
 
-  top: 18em;
+  top: 68em;
 }
 .parallax-group--mid-right .parallax-item:nth-child(3) {
   top: 96em;
@@ -217,7 +217,7 @@ a[target="_blank"]:after {
 
 /* droite */
 .parallax-group--far-right .parallax-item:nth-child(1) {
-  top: 36em;
+  top: 16em;
 }
 .parallax-group--far-right .parallax-item:nth-child(2) {
   top: 96em;

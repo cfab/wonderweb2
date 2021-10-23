@@ -43,8 +43,8 @@
   <!-- end parallax -->
   <header
     class="container relative z-10 flex flex-wrap justify-between mx-auto mt-16 font-bold tracking-wider uppercase">
-    <div class="w-1/4 px-4"><a href="{{ '/' | url }}" class="text-white">Wonderweb</a></div>
-    <div class="w-1/4 px-4">
+    <div class="w-1/2 px-4 md:w-1/4"><a href="{{ '/' | url }}" class="text-white">Wonderweb</a></div>
+    <div class="w-1/2 px-4 md:w-1/4">
       <ul class="nav">
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
         {%- for entry in collections.all | eleventyNavigation %}
@@ -64,9 +64,9 @@
     {{ content | safe }}
 
     <footer class="container relative z-10 flex flex-wrap justify-end mx-auto my-16 font-bold tracking-wider uppercase">
-    <div class="w-1/4 px-4"><span class="text-ui">© 2010 — 2022</span> <br>
+    <div class="w-full px-4 md:w-1/4"><span class="text-ui">© 2010 — 2022</span> <br>
       <a href="/apropos/">A propos</a></div>
-    <div class="w-1/4 px-4">
+    <div class="w-full px-4 md:w-1/4">
       <ul class="nav">
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
         {%- for entry in collections.all | eleventyNavigation %}
