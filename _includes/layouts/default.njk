@@ -11,7 +11,7 @@
   {% block head %}{% endblock %}
 </head>
 
-<body data-barba="wrapper">
+<body data-barba="wrapper" id="top">
   <!-- parallax -->
   <div class="body-parallax">
     <div class="container parallax">
@@ -89,7 +89,6 @@
     barba.init({
    //
   });
-
   barba.hooks.afterLeave(data => {
 
     // Update the active menu item classes
@@ -106,6 +105,9 @@
           nextItem.classList.add('item-active');
         }
     } });
+     barba.hooks.enter(() => {
+      document.getElementById("top").scrollIntoView();
+     });
   </script>
   <script src="/js/rellax.js?v={% version %}"></script>
   <script>
