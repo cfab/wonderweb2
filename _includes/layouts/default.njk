@@ -42,8 +42,8 @@
   </div>
   <!-- end parallax -->
   <header
-    class="container relative z-10 flex flex-wrap justify-between mx-auto mt-16 font-bold tracking-wider uppercase nav">
-    <div class="w-1/2 px-4 md:w-1/4"><a href="{{ '/' | url }}" class="text-white">Wonderweb</a></div>
+    class="container relative z-10 flex flex-wrap justify-between mx-auto mt-16 font-bold tracking-wider uppercase nav ">
+    <div class="w-1/2 px-4 md:w-1/4"><span class="text-white">Wonderweb</span></div>
     <div class="w-1/2 px-4 md:w-1/4">
       <ul class="">
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
@@ -54,6 +54,7 @@
       </ul>
     </div>
     <div class="w-1/2 px-4">
+
     </div>
     </div>
   </header>
@@ -61,27 +62,18 @@
     <div class="w-full px-4 mt-8 md:mt-24 md:w-3/4">
       <h1>{{ title | safe }}</h1>
     </div>
+    <!-- Current page: {{ page.url | url }} -->
+    {# <pre>{{ page | debug }}</pre> #}
+
     {{ content | safe }}
 
     <footer class="container relative z-10 flex flex-wrap justify-start mx-auto my-16 font-bold tracking-wider uppercase nav">
       <div class="w-full px-4 md:w-1/4 ">
-        <span class="text-ui">© 2010 — 2022</span> <br>
-
-      </div>
-      <div class="w-full px-4 md:w-1/4">
-        <ul class="">
-          {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
-          {%- for entry in collections.all | eleventyNavigation %}
-          <li class="nav-item"><a href="{{ entry.url | url }}"
-              class="{% if entry.url == page.url %} item-active{% endif %}">{{ entry.title }}</a></li>
-          {%- endfor %}
-        </ul>
+        <span class="text-ui">© 2010 — 2022</span>
       </div>
   </footer>
   </main>
 
-  <!-- Current page: {{ page.url | url }} -->
-  {# <pre>{{ page | debug }}</pre> #}
   <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
   <script src="https://cdn.jsdelivr.net/npm/@barba/css"></script>
   <script>
@@ -98,7 +90,7 @@
 
         // select the menu item depending on the next URL (you can do that in many ways)
         let nextItem = menu.querySelector(`a[href="${data.next.url.path}"]`);
-
+-
         // reset the active menu item and set the next item as "active" (if there is one)
         if (nextItem !== null) {
           menu.querySelector('.item-active').classList.remove('item-active');
