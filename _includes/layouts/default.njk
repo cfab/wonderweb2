@@ -42,14 +42,14 @@
   </div>
   <!-- end parallax -->
   <header
-    class="container relative z-10 flex flex-wrap justify-between mx-auto mt-16 font-bold tracking-wider uppercase nav ">
-    <div class="w-1/2 px-4 md:w-1/4"><span class="text-white">Wonderweb</span></div>
-    <div class="w-1/2 px-4 md:w-1/4">
+    class="container relative z-10 flex flex-wrap justify-start mx-auto mt-16 font-bold tracking-wider uppercase nav ">
+    <div class="w-1/2 px-4 sm:w-1/4"><span class="text-white">Wonderweb</span></div>
+    <div class="w-1/2 px-4 sm:w-1/2">
       <ul class="">
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
         {%- for entry in collections.all | eleventyNavigation %}
         <li class="nav-item"><a href="{{ entry.url | url }}"
-            class="{% if entry.url == page.url %} item-active{% endif %}">{{ entry.title }}</a></li>
+            class="{% if entry.url == page.url %} item-active{% endif %}">{{ entry.title }} <span class="hidden sm:inline text-ui">{{ entry.url | url }}</span></a></li>
         {%- endfor %}
       </ul>
     </div>
@@ -78,32 +78,27 @@
   <script src="https://cdn.jsdelivr.net/npm/@barba/css"></script>
   <script>
     barba.use(barbaCss);
-    barba.init({
-   //
-  });
-  barba.hooks.afterLeave(data => {
-
+    barba.init();
+    barba.hooks.afterLeave(data => {
     // Update the active menu item classes
-    if (data.next.url.path) {
-// get the menu element
-        let menu = document.querySelector('.nav');
-
-        // select the menu item depending on the next URL (you can do that in many ways)
-        let nextItem = menu.querySelector(`a[href="${data.next.url.path}"]`);
--
-        // reset the active menu item and set the next item as "active" (if there is one)
-        if (nextItem !== null) {
-          menu.querySelector('.item-active').classList.remove('item-active');
-          nextItem.classList.add('item-active');
-        }
-    } });
-     barba.hooks.enter(() => {
+      if (data.next.url.path) {
+          // get the menu element
+          let menu = document.querySelector('.nav');
+          // select the menu item depending on the next URL (you can do that in many ways)
+          let nextItem = menu.querySelector(`a[href="${data.next.url.path}"]`);
+          // reset the active menu item and set the next item as "active" (if there is one)
+          if (nextItem !== null) {
+            menu.querySelector('.item-active').classList.remove('item-active');
+            nextItem.classList.add('item-active');
+          }
+      }
+    });
+    barba.hooks.enter(() => {
       document.getElementById("top").scrollIntoView();
-     });
+    });
   </script>
   <script src="/js/rellax.js?v={% version %}"></script>
   <script>
-    // Accepts any class name
     var rellax = new Rellax('.parallax-item', {
       speed: 2,
       center: false,

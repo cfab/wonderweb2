@@ -36,22 +36,22 @@ body {
 
 h1 {
   @apply font-serif text-2xl font-bold leading-snug md:text-4xl text-ui;
-  animation: 500ms ease-out fadeInUpSD;
+  /* animation: 500ms ease-out fadeInUpSD; */
 
 }
 
 .chapeau {
   @apply w-full px-4 font-serif text-2xl font-bold leading-snug text-white md:text-4xl md:w-3/4;
 
-  animation: 500ms ease-out 100ms fadeInUpSD;
+  /* animation: 500ms ease-out 100ms fadeInUpSD; */
 }
 
 .content {
-  animation: 500ms ease-out 200ms fadeInUpSD;
+  /* animation: 500ms ease-out 200ms fadeInUpSD; */
 }
 
 footer {
-  animation: 500ms ease-out 300ms fadeInUpSD;
+  /* animation: 500ms ease-out 300ms fadeInUpSD; */
 }
 
 a {
@@ -240,7 +240,6 @@ a[target="_blank"]:after {
 
 
 
-
 @-webkit-keyframes fadeInUpSD {
   0% {
 
@@ -249,7 +248,7 @@ a[target="_blank"]:after {
   }
 
   100% {
-    opacity: 1;
+
     -webkit-transform: none;
     transform: none;
   }
@@ -263,7 +262,7 @@ a[target="_blank"]:after {
   }
 
   100% {
-    opacity: 1;
+
     -webkit-transform: none;
     transform: none;
   }
