@@ -18,8 +18,9 @@ eleventyNavigation:
       <span class="date">{{ post.data.date | htmlDateString }}</span>
     </div>
     <div class="flex flex-1 md:px-4 ">
-      <img src="{{ post.data.url }}/favicon.ico" class="inline w-6 h-6 mr-2 bg-uidark" alt="" width="16" height="16" />
-      <div class="flex-1 md:ml-2">
+    <div class="favicon">
+      <img src="{{ post.data.url }}/favicon.ico" class="inline w-6 h-6 mr-2 bg-transparent" alt="" width="16" height="16" />
+      </div><div class="flex-1 md:ml-2">
         <a href="{{ post.data.url }}" target="_blank" rel="noopener"
           class="font-sans font-bold tracking-wider uppercase border-b-2 border-solid text-secondary border-secondary">{{ post.data.title }}</a>
         <div class="font-serif text-lg md:my-4 ">

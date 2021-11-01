@@ -81,7 +81,9 @@ a {
 .page-content a:hover {
   @apply text-secondary border-secondary;
 }
-
+.favicon {
+  filter:  invert(99%) sepia(99%) saturate(2%) hue-rotate(86deg) brightness(107%) contrast(100%);
+}
 
 a[target="_blank"]:after {
   @apply text-ui;
