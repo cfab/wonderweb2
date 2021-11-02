@@ -12,7 +12,7 @@ module.exports = {
       //   es :'Times New Roman',
       // },
       colors: {
-        primary: '#953b3a',
+        primary: '#fff',
         secondary:'#FF6A67',
         uidark: '#493866',
         ui: '#664f8d',

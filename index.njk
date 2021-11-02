@@ -20,7 +20,9 @@ eleventyNavigation:
                 {{ post.data.title }}
             </span>
             <div class="my-4 font-serif text-lg">
-                {{ post.data.description }}
+
+                {{ post.templateContent | striptags }}
+
             </div>
         </div>
     </div>

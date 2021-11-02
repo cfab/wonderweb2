@@ -27,11 +27,11 @@
 }
 
 ::selection {
-  @apply text-white bg-secondary;
+  @apply text-primary bg-secondary;
 }
 
 body {
-  @apply font-sans text-base text-white bg-uidark;
+  @apply font-sans text-base text-primary bg-uidark;
 }
 
 h1 {
@@ -41,7 +41,7 @@ h1 {
 }
 
 .chapeau {
-  @apply w-full px-4 font-serif text-2xl font-bold leading-snug text-white md:text-4xl md:w-3/4;
+  @apply w-full px-4 font-serif text-2xl font-bold leading-snug text-primary md:text-4xl md:w-3/4;
 
   /* animation: 500ms ease-out 100ms fadeInUpSD; */
 }
@@ -62,7 +62,7 @@ a {
   @apply transition;
 }
 .nav a.item-active {
-  @apply text-white;
+  @apply text-primary;
 }
 
 .date {
@@ -76,7 +76,7 @@ a {
   @apply my-4 font-serif text-lg;
 }
 .page-content a {
-  @apply text-white border-b border-solid;
+  @apply text-primary border-b border-solid;
 }
 .page-content a:hover {
   @apply text-secondary border-secondary;
