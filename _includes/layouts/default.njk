@@ -49,7 +49,7 @@
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
         {%- for entry in collections.all | eleventyNavigation %}
         <li class="nav-item"><a href="{{ entry.url | url }}"
-            class="{% if entry.url == page.url %} item-active{% endif %}">{{ entry.title }} <span class="hidden sm:inline text-ui">{{ entry.url | url }}</span></a></li>
+            class="{% if entry.url == page.url %} item-active{% endif %}">{{ entry.title }} </a></li>
         {%- endfor %}
       </ul>
     </div>
@@ -71,6 +71,8 @@
       <div class="w-full px-4 md:w-1/4 ">
         <span class="text-ui">© 2010 — 2022</span>
       </div>
+      <div id="wcb" class="carbonbadge"></div>
+<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
   </footer>
   </main>
 

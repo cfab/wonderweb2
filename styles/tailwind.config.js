@@ -13,9 +13,10 @@ module.exports = {
       // },
       colors: {
         primary: '#fff',
-        secondary:'#FF6A67',
-        uidark: '#493866',
-        ui: '#664f8d',
+        secondary:'#e83d43',
+        uidark: '#4a4545',
+        ui: '#e83d43',
+        uialt: '#333',
       },
     },
   },
