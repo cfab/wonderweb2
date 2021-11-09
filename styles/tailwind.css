@@ -85,6 +85,8 @@ a {
   filter:  invert(99%) sepia(99%) saturate(2%) hue-rotate(86deg) brightness(107%) contrast(100%);
 }
 
+
+
 a[target="_blank"]:after {
   @apply text-ui;
   content: '\2937';

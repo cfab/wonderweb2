@@ -3,13 +3,18 @@ const now = String(Date.now())
 const { DateTime } = require("luxon");
 // pour le debug cf: https://github.com/11ty/eleventy/issues/1526#issuecomment-731855231
 const inspect = require("util").inspect;
+const svgContents = require('eleventy-plugin-svg-contents');
 
 
 module.exports = function (eleventyConfig) {
   // debug
   eleventyConfig.addFilter("debug", (content) => `${inspect(content)}`);
 
-  eleventyConfig.addPassthroughCopy("fonts");
+  // copy /fonts folder to site production
+  // eleventyConfig.addPassthroughCopy("fonts");
+
+  //inline svg
+  eleventyConfig.addPlugin(svgContents);
 
   // navigation plugin
   const pluginNavigation = require("@11ty/eleventy-navigation");
@@ -20,9 +25,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./styles/tailwind.css')
 
   // alpine js
-  eleventyConfig.addPassthroughCopy({
-    './node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
-  })
+  // eleventyConfig.addPassthroughCopy({
+  //   './node_modules/alpinejs/dist/cdn.js': './js/alpine.js',
+  // })
+
   // rellax scroll js
   eleventyConfig.addPassthroughCopy({
     './node_modules/rellax/rellax.min.js': './js/rellax.js',

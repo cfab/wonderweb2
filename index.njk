@@ -13,7 +13,9 @@ eleventyNavigation:
     <div class="flex flex-wrap w-full my-8 text-base md:my-8 md:w-3/4">
         <div class="flex-1 px-4">
             <div class="md:absolute md:-ml-24">
-            <span class="text-6xl">{{ post.data.icon }}</span>
+            <span class="text-6xl">
+            {{ post.data.svg | svgContents("h-12 w-12 md:w-16 md:h-16 text-secondary") | safe  }}
+            </span>
             </div>
 
             <span class="font-sans font-bold tracking-wider uppercase text-secondary ">
