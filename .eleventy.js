@@ -13,6 +13,7 @@ module.exports = function (eleventyConfig) {
   // copy /fonts folder to site production
   // eleventyConfig.addPassthroughCopy("fonts");
 
+
   //inline svg
   eleventyConfig.addPlugin(svgContents);
 
@@ -38,6 +39,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode('version', function () {
     return now
   })
+  // Annee en cours
+  eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   // minify html
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
