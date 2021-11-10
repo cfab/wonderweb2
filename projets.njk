@@ -7,24 +7,22 @@ eleventyNavigation:
   key: Réalisations
 ---
 <div class="chapeau">
-  Alors ici on est plutôt sur du site internet <em>local</em> et de <em>qualité</em>, fait avec passion en suivant
-  l'évolution des technologies.
+  Une sélection de nos réalisations.
 </div>
 {% block contenu %}
 <ol class="flex flex-col items-end mt-8 md:mt-16 content">
   {% for post in collections.projets | reverse %}
-  <li class="flex flex-wrap w-full px-4 my-4 text-base md:my-8 md:px-0 md:w-3/4">
-    <div class="w-full ml-10 md:block md:absolute md:-ml-24">
+  <li class="relative flex flex-wrap w-full px-4 my-4 text-base md:my-8 md:px-0 md:w-3/4">
+    <div class="w-full md:block md:absolute md:-ml-24">
       <span class="date">{{ post.data.date | htmlDateString }}</span>
     </div>
     <div class="flex flex-1 md:px-4 ">
-    <div class="favicon">
-      <img src="{{ post.data.url }}/favicon.ico" class="inline w-6 h-6 mr-4 bg-transparent" alt="" width="16" height="16" />
-      </div><div class="flex-1 md:ml-2">
+
+      <div class="flex-1 ">
         <a href="{{ post.data.url }}" target="_blank" rel="noopener"
           class="font-sans text-2xl font-bold tracking-wider uppercase text-secondary border-secondary">{{ post.data.title }}</a>
-        <div class="mt-2 font-serif text-lg md:my-4 ">
-           {{ post.templateContent | striptags }}
+        <div class="mt-2 font-serif text-lg ">
+           {{ post.templateContent | safe }}
         </div>
       </div>
     </div>

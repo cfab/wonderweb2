@@ -7,4 +7,4 @@ date: 2021-09-01
 tags: projets
 permalink: false
 ---
-Nouvelle saison, nouveau site.. complétement repensé pour être plus léger et plus rapide. Collaboration avec Pablo Lavalley.
+Nouvelle saison, nouveau site.. complétement repensé pour être plus léger et plus rapide. Collaboration avec <a href="https://cestavoir.ch/" target="_blank">Pablo Lavalley</a>.
