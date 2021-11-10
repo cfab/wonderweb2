@@ -7,4 +7,4 @@ url: https://icmc.net
 tags: projets
 permalink: false
 ---
-Mon premier projet
+Refonte du design et l'architecture de contenu. Migration de Drupal vers Wordpress. Création des rapports annuels en version digitale.

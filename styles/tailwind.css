@@ -87,13 +87,10 @@ a {
 
 
 
-a[target="_blank"]:after {
-  @apply text-ui;
+a[target="_blank"]:not(.text-2xl):after {
+  @apply text-secondary;
   content: '\2937';
   margin: 0 3px 0 5px;
-  position: absolute;
-  top: -0.2em;
-  right: -1.5em;
 }
 
 

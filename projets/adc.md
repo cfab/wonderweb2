@@ -7,4 +7,4 @@ date: 2021-06-01
 tags: projets
 permalink: false
 ---
-Mon deuxième projet
+Mise en ligne de la nouvelle saison 2021. Collaboration avec Pablo Lavalley.

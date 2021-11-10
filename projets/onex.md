@@ -7,4 +7,4 @@ date: 2021-06-01
 tags: projets
 permalink: false
 ---
-Mon deuxième projet
+Création d'un nouveau site indépendant de la communse pour ce lieu culturel.

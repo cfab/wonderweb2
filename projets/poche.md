@@ -7,4 +7,4 @@ date: 2021-09-01
 tags: projets
 permalink: false
 ---
-Mon deuxième projet
+Nouvelle saison, nouveau site.. complétement repensé pour être plus léger et plus rapide. Collaboration avec Pablo Lavalley.
