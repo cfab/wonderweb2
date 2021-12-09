@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="top">
-
+<html lang="fr" id="top">
 <head>
   <title>{{ icon }} {{ title or metadata.title }} - {{metadata.title}}</title>
   <meta charset="UTF-8" />
@@ -44,11 +43,11 @@
   <header
     class="container relative z-10 flex flex-wrap justify-start mx-auto mt-16 font-bold tracking-wider uppercase nav ">
     <div class="w-1/2 px-4 sm:w-1/4">
-    <span class="text-primary">
+    <a href="../" class="text-primary">
    {{ "/icons/logo.svg" | svgContents("w-3/4 h-auto text-secondary opacity-90") | safe  }}
 
 
-</span></div>
+</a></div>
     <div class="w-1/2 px-4 sm:w-1/2">
       <ul class="">
         {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
