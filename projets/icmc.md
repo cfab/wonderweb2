@@ -7,4 +7,5 @@ url: https://icmc.net
 tags: projets
 permalink: false
 ---
-Refonte du design et l'architecture de contenu. Migration de Drupal vers Wordpress. Création des rapports annuels en version digitale.
+Refonte du design et l'architecture de contenu. Migration de Drupal vers Wordpress.  
+Création des rapports annuels en version digitale.

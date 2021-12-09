@@ -8,4 +8,5 @@ date: 2020-01-01
 tags: projets
 permalink: false
 ---
-Refonte des sites du mouvement. Collaboration avec <a href="//www.niels-wehrspann.com/" target="_blank">Niels Wehrspann</a>. 
+Refonte des sites du mouvement.  
+Collaboration avec <a href="//www.niels-wehrspann.com/" target="_blank">Niels Wehrspann</a>. 

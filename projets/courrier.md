@@ -7,4 +7,5 @@ date: 2018-02-01
 tags: projets
 permalink: false
 ---
-Refonte du site du quotidien. Collaboration avec <a href="//onepixel.ch" target="_blank">Onepixel</a> et <a href="https://epicstudio.ch/" target="_blank">Epic</a>. 
+Refonte du site du quotidien.  
+Collaboration avec <a href="//onepixel.ch" target="_blank">Onepixel</a> et <a href="https://epicstudio.ch/" target="_blank">Epic</a>. 

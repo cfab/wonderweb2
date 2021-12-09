@@ -7,4 +7,4 @@ date: 2021-06-01
 tags: projets
 permalink: false
 ---
-Création d'un nouveau site indépendant de la communse pour ce lieu culturel.
+Création d'un nouveau site pour ce lieu culturel.

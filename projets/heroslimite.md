@@ -7,4 +7,4 @@ date: 2021-03-01
 tags: projets
 permalink: false
 ---
-Refonte du site de l'éditeur.
+Refonte du site. Ajout de toute la partie *pavillon sonore*.
