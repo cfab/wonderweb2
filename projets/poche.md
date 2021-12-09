@@ -1,5 +1,5 @@
 ---
-title: Le POCHE
+title: Poche/GVE
 layout: post
 description: Saison 18-19-20-21-22
 url: https://poche---gve.ch/
