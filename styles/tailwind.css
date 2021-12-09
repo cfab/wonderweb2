@@ -75,12 +75,12 @@ a {
 .page-content p {
   @apply my-4 font-serif text-lg;
 }
-.page-content a {
+/* .page-content a {
   @apply border-b border-solid text-primary;
 }
 .page-content a:hover {
   @apply text-secondary border-secondary;
-}
+} */
 .favicon {
   filter:  invert(99%) sepia(99%) saturate(2%) hue-rotate(86deg) brightness(107%) contrast(100%);
 }
