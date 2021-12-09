@@ -4,6 +4,7 @@ const { DateTime } = require("luxon");
 // pour le debug cf: https://github.com/11ty/eleventy/issues/1526#issuecomment-731855231
 const inspect = require("util").inspect;
 const svgContents = require('eleventy-plugin-svg-contents');
+const faviconPlugin = require("eleventy-favicon");
 
 
 module.exports = function (eleventyConfig) {
@@ -13,6 +14,8 @@ module.exports = function (eleventyConfig) {
   // copy /fonts folder to site production
   // eleventyConfig.addPassthroughCopy("fonts");
 
+  // favicon
+  eleventyConfig.addPlugin(faviconPlugin);
 
   //inline svg
   eleventyConfig.addPlugin(svgContents);
