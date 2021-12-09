@@ -8,7 +8,7 @@
   "scripts": {
     "w": "eleventy --serve & npx tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --watch",
     "p": "ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production npx tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --minify",
-    "dev": "ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production npx tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --minify && ntl deploy --prod",
+    "stage": "ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production npx tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --minify && ntl deploy --prod",
     "prod": "ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production npx tailwindcss -i styles/tailwind.css -c styles/tailwind.config.js -o _site/style.css --minify && node deploy"
   },
   "devDependencies": {
