@@ -12,10 +12,10 @@ module.exports = {
       //   es :'Times New Roman',
       // },
       colors: {
-        primary: '#fff',
-        secondary:'#e83d43',
+        primary: '#ffffffee',
+        secondary:'#e83d43ee',
         uidark: '#4a4545',
-        ui: '#e83d43',
+        ui: '#e83d43ee',
         uialt: '#333',
       },
     },
