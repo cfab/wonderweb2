@@ -15,10 +15,11 @@
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-navigation": "^0.3.2",
     "alpinejs": "^3.3.3",
+    "dotenv": "^10.0.0",
     "eleventy-plugin-svg-contents": "^0.7.0",
     "html-minifier": "^4.0.0",
-    "dotenv": "^10.0.0",
-    "ssh-deploy-release": "^3.0.4"
+    "ssh-deploy-release": "^3.0.4",
+    "eleventy-favicon": "^1.1.2"
   },
   "dependencies": {
     "locomotive-scroll": "^4.1.3",
